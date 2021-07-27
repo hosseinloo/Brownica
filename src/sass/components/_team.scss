@@ -1,0 +1,89 @@
+.team {
+    height: auto;
+    padding: rem(100px) 0 !important;
+    background-color: #daad6a09;
+    h2 {
+        display: inline-block;
+        text-align: center;
+        &::after {
+            content: "";
+            width: 200px;
+            height: 200px;
+            background: url("../../public/images/blob4.svg") no-repeat -65px 0px / contain, url("../../public/images/blob4.svg") no-repeat -100px 0px / contain;
+            display: inline-block;
+            position: absolute;
+            top: -114px;
+            left: -20px;
+            z-index: -1;
+        }
+    }
+    .member {
+        position: relative;
+        margin-bottom: rem(80px);
+        .pic {
+            z-index: -1;
+        }
+        h4 {
+            position: relative;
+        }
+        h4::after {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 50px;
+            background-color: $font-color;
+            position: absolute;
+            top: -10px;
+        }
+        &:hover .member-info {
+            max-height: 300px;
+        }
+        .member-info {
+            position: absolute;
+            top: 85%;
+            left: 20px;
+            right: 20px;
+            background: #daad6afb;
+            padding: 10px 0;
+            color: $font-color;
+            box-shadow: 0px 2px 15px #0000001a;
+            max-height: 95px;
+            overflow: hidden;
+            transition: max-height 0.7s ease-in-out;
+            h4 {
+                position: relative;
+                font-size: rem(18px);
+                font-weight: 700;
+                margin-bottom: rem(10px);
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    height: 2px;
+                    width: rem(100px);
+                    background-color: $font-color;
+                    position: absolute;
+                    top: rem(40px);
+                    left: 50%;
+                    margin-left: rem(-50px);
+                    border-radius: 70% 70%;
+                }
+            }
+            span {
+                display: inline-block;
+                padding-top: rem(10px);
+                padding-bottom: rem(10px);
+                font-size: rem(13px);
+            }
+            .social {
+                margin-top: rem(10px);
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: rem(0px) rem(10px);
+                    font-size: rem(22px);
+                    color: $font-color;
+                }
+            }
+        }
+    }
+}

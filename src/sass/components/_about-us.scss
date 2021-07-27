@@ -1,0 +1,55 @@
+.about-us {
+    height: auto;
+    background: linear-gradient(180deg, rgba(218, 173, 106, 1) 24%, rgba(218, 173, 106, 0.524) 65%), url("../../public/images/about-bg.jpg") no-repeat center center/ cover;
+    h2 {
+        z-index: 100;
+        position: relative;
+        span {
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 200px;
+                height: 200px;
+                z-index: -1;
+                background: url("../../public/images/blob.about.svg") no-repeat, url("../../public/images/blob.about.svg") no-repeat -30px;
+                background-size: cover;
+                position: absolute;
+                bottom: -20px;
+                left: 0px;
+                @include mediaQuery(sm) {
+                    left: 40px;
+                }
+                @include mediaQuery(md) {
+                    left: -90px;
+                }
+            }
+        }
+    }
+    .about-content {
+        @include mediaQuery(md) {
+            margin-top: rem(60px);
+            .box-about:nth-child(even) {
+                padding-left: rem(30px) !important;
+            }
+        }
+    }
+    .box-about {
+        margin-top: rem(30px);
+        @include mediaQuery(lg) {
+            margin-top: 0;
+        }
+        p {
+            @include mediaQuery(lg) {
+                padding-right: rem(30px);
+            }
+        }
+    }
+    p {
+        word-spacing: 2px;
+        line-height: 1.5;
+    }
+    .about-icon,
+    h3 {
+        color: $font-color;
+    }
+}

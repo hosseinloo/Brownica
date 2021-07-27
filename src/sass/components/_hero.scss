@@ -1,0 +1,39 @@
+.hero {
+    background: url("../../public/images/blob2.svg") no-repeat -180px 0px / contain, url("../../public/images/blob3.svg") no-repeat 50px 100px / contain, url("../../public/images/blob1.svg") no-repeat top center/ cover, linear-gradient(180deg, #daad6a78 20%, #daad6a 70%), url("../../public/images/hero.jpg") no-repeat center center/ cover;
+    @include mediaQuery(lg) {
+        background: linear-gradient(180deg, #d6aa678e, #daad6ace), url("../../public/images/blob2.svg") no-repeat -180px 0px / contain, url("../../public/images/blob3.svg") no-repeat 50px 100px / contain, url("../../public/images/blob1.svg") no-repeat top center/ cover, url("../../public/images/hero.jpg") no-repeat center center/ cover;
+    }
+    z-index: 2;
+    .hero-header {
+        font-weight: bolder;
+        text-shadow: 1px 1px 3px $navigator-bg;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        color: $font-color;
+    }
+    .btn-get-started {
+        position: relative;
+        display: inline-block;
+        z-index: 100;
+        color: $font-color;
+        &::after {
+            content: "";
+            display: inline-block;
+            height: rem(60px);
+            width: rem(60px);
+            border: 3px solid $font-color;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -12px;
+            margin-top: -30px;
+            z-index: -1;
+        }
+    }
+    #hero {
+        display: none;
+    }
+    .anim {
+        animation: heroTranslate 1.5s linear 1 0.6s;
+    }
+}

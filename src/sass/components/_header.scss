@@ -1,0 +1,113 @@
+.header {
+    transition: all 0.4s;
+    .navbar-parent {
+        @include mediaQuery(lg) {
+            padding-top: rem(10px);
+        }
+    }
+    a {
+        color: $font-color;
+    }
+    .nav-icon {
+        display: inline-block;
+        @include mediaQuery(lg) {
+            display: none;
+        }
+        i {
+            display: inline-block;
+            padding-top: rem(7px);
+        }
+    }
+    .navbar-container {
+        background-color: #daad6af6;
+        transition: all 0.4s;
+    }
+    .navigator {
+        border-radius: rem(7px);
+        @include mediaQuery(lg) {
+            position: static;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            // li a {
+            //     &:hover {
+            //         background-color: $font-color;
+            //         color: #daad6a !important;
+            //         transition: all .7s;
+            //     }
+            // }
+        }
+        @media screen and (max-width: 992px) {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: #daad6a !important;
+            width: 100%;
+            display: none;
+            z-index: 1000;
+            align-items: center;
+            .dropdown-item {
+                color: $font-color;
+            }
+            li a {
+                max-width: 100%;
+                display: block;
+                text-align: center;
+                &:hover {
+                    background-color: $font-color;
+                    color: #daad6a !important;
+                    transition: all 0.7s;
+                }
+                .dropdown-item {
+                    background-color: $font-color;
+                    color: #daad6a;
+                }
+            }
+        }
+        li a {
+            padding: rem(15px) rem(25px) !important;
+            &:hover {
+                background-color: $font-color;
+                color: $navigator-bg;
+                transition: all 0.5s ease-in-out;
+                box-sizing: border-box;
+            }
+            @include mediaQuery(xl) {
+                font-size: 16px !important;
+            }
+            @include mediaQuery(lg) {
+                font-size: 14px;
+                &:last-child:hover {
+                    border-radius: 0 0.25rem 0.25rem 0 !important;
+                    transition: all 0.4s;
+                }
+                &:first-child:hover {
+                    border-radius: 0 0 0 0 !important;
+                }
+            }
+        }
+    }
+}
+
+.logo {
+    font-size: rem(26px) !important;
+    font-weight: bold !important;
+    @include mediaQuery(lg) {
+        padding-left: rem(20px);
+    }
+}
+
+.header-style {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.4s;
+    .navbar-parent {
+        padding-top: 0;
+        transition: all 0.4s;
+    }
+}

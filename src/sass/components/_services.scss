@@ -1,0 +1,38 @@
+.services {
+    height: auto;
+    padding: rem(100px) 0 !important;
+    h2 {
+        display: inline-block;
+        text-align: center;
+        &::after {
+            content: "";
+            width: 200px;
+            height: 200px;
+            background: url("../../public/images/blob4.svg") no-repeat -65px 0px / contain, url("../../public/images/blob4.svg") no-repeat -100px 0px / contain;
+            display: inline-block;
+            position: absolute;
+            top: -114px;
+            left: -20px;
+            z-index: -1;
+        }
+    }
+    .box {
+        height: auto;
+        box-shadow: 0 0 29px 0 rgba(135, 77, 18, 0.129);
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+        margin: 0 rem(15px);
+        padding: rem(18px);
+        margin-bottom: rem(50px);
+        h3 {
+            color: $font-color;
+        }
+        i {
+            margin-left: rem(-5px);
+            color: $navigator-bg;
+        }
+    }
+}

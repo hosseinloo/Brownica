@@ -1,0 +1,19 @@
+.contact {
+    background: linear-gradient(120deg, #daad6a28, #daad6a1a);
+    .contact-box {
+        text-align: center;
+        max-width: 100%;
+        height: auto;
+        padding: rem(20px);
+        background-color: $navigator-bg;
+        border-radius: 5px;
+    }
+    form.contact-box {
+        input {
+            margin: rem(10px) 0;
+        }
+        textarea {
+            height: rem(170px);
+        }
+    }
+}

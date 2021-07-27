@@ -1,0 +1,80 @@
+.testimonials {
+    background-color: #daad6aaa;
+    height: auto;
+    padding: rem(100px) 0 !important;
+    h2 {
+        display: inline-block;
+        text-align: center;
+        &::after {
+            content: "";
+            width: 200px;
+            height: 200px;
+            background: url("../../public/images/blob5.svg") no-repeat 20px 20px / contain;
+            display: inline-block;
+            position: absolute;
+            top: -81px;
+            left: -50px;
+            z-index: -1;
+            transition: all 0.4s;
+            animation: scaleTestimonial 10s linear infinite reverse;
+        }
+    }
+    .owl-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            font-style: italic;
+            margin: 0 rem(15px) rem(15px) rem(15px);
+            padding: rem(20px);
+            background: #fbf1db;
+            position: relative;
+            margin-bottom: rem(35px);
+            border-radius: rem(6px);
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        p::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: rem(20px) solid #fff;
+            border-right: rem(20px) solid transparent;
+            border-left: rem(20px) solid transparent;
+            position: absolute;
+            bottom: rem(-20px);
+            left: calc(50% - 20px);
+        }
+    }
+    .owl-dots {
+        margin-top: rem(25px);
+        text-align: center;
+    }
+    .owl-dot {
+        display: inline-block;
+        margin: 0 rem(7px);
+        width: rem(12px);
+        height: rem(12px);
+        border-radius: 50%;
+        background-color: rgb(241, 218, 197) !important;
+    }
+    .owl-dot.active {
+        background-color: #9b6615 !important;
+    }
+    .quote-icon-left,
+    .quote-icon-right {
+        color: #daad6a;
+        font-size: rem(26px);
+    }
+    .quote-icon-left {
+        display: inline-block;
+        left: rem(-7px);
+        position: relative;
+    }
+    .quote-icon-right {
+        display: inline-block;
+        right: rem(-7px);
+        position: relative;
+        top: 10px;
+    }
+}

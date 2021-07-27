@@ -1,0 +1,30 @@
+.count {
+    max-width: 100%;
+    height: auto;
+    background: radial-gradient(circle, rgba(251, 237, 195, 1) 59%, rgba(218, 173, 106, 1) 100%);
+    .box-count {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: rem(20px);
+        color: $font-color;
+        padding-left: rem(40px);
+        @include mediaQuery(xl) {
+            padding-left: rem(20px);
+        }
+        .count-icon {
+            text-align: left;
+            color: #bf8835;
+        }
+        span {
+            font-weight: 700;
+            margin-left: rem(15px);
+            color: $font-color;
+        }
+        p {
+            margin-left: rem(66px);
+            margin-top: rem(10px);
+        }
+    }
+}

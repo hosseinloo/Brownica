@@ -1,0 +1,125 @@
+// google font include
+@include googleFont("Exo2");
+@include googleFont("Roboto");
+@include googleFont("Lato");
+// global style
+html {
+    --scrollbarBG: #daad6a8d;
+    --thumbBG: #daad6a;
+}
+
+body {
+    font-family: "exo", "Exo2", "Roboto", "Lato", verdana, sans-serif;
+    color: $font-color;
+    scroll-behavior: smooth;
+    transition: scroll-behavior 1s ease-out;
+    // overflow-x: hidden;
+    scrollbar-width: 12px;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG);
+        border-radius: 10px;
+        border: 3px solid var(--scrollbarBG);
+    }
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+h2,
+h1 {
+    color: $font-color;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.5;
+    word-spacing: 2px;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+.opacity-70 {
+    opacity: 0.7;
+}
+
+.icon-color {
+    color: $icon-color;
+}
+
+.font-color {
+    color: $font-color;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.header-style {
+    background-color: $navigator-bg;
+    height: 60px !important;
+}
+
+// add Exo Font
+@font-face {
+    src: url("../../public/fonts/Exo2-Regular.ttf");
+    font-family: "exo";
+}
+
+@include animation(heroTranslate) {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@include animation(hoverNav) {
+    25% {
+        border-bottom: 2px solid $font-color;
+    }
+    50% {
+        border-left: 2px solid $font-color;
+    }
+    75% {
+        border-top: 2px solid $font-color;
+    }
+    100% {
+        border-right: 2px solid $font-color;
+    }
+}
+
+@include animation(scaleTestimonial) {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+}

@@ -1,0 +1,58 @@
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #f3e7d5;
+    z-index: 1000000;
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        transition: all 0.3s;
+        width: 70px;
+        height: 70px;
+        position: fixed;
+        top: calc(50% - 35px);
+        background: hsl(36, 60%, 64%);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &::before {
+        left: 20%;
+        animation: osc-l 1.5s linear 0.2s infinite;
+    }
+    &::after {
+        left: 80%;
+        animation: osc-r 1.5s linear 0.2s infinite;
+        background: hsl(29, 36%, 27%);
+    }
+}
+
+@keyframes osc-l {
+    0% {
+        left: 20%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+
+@keyframes osc-r {
+    0% {
+        left: 80%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 80%;
+    }
+}
