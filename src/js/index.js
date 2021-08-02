@@ -46,10 +46,6 @@ function init() {
             burgerMenu = false;
         }
     });
-    // var windowInnerWidth = $(window).innerWidth();
-    // if (windowInnerWidth > 992) {
-
-    // }
 
     // Carousel Testimonials
     $(".owl-carousel").owlCarousel({
@@ -74,6 +70,8 @@ function init() {
         delay: 10,
         time: 1000,
     });
+
+    // Aos animation
 
     function aosInit() {
         AOS.init({
